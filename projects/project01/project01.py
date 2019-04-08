@@ -48,8 +48,8 @@ def last_minute_submissions(grades):
     True
     >>> np.all(out.index == ['hw0%d' % d for d in range(1,10)])
     True
-    >>> np.all(out > 0)
-    True
+    >>> (out > 0).sum()
+    8
     """
 
     return ...
@@ -219,7 +219,7 @@ def letter_proportions(grades):
     >>> fp = os.path.join('data', 'grades.csv')
     >>> grades = pd.read_csv(fp)
     >>> out = letter_proportions(grades)
-    >>> np.all(out.index == ['B', 'C', 'D', 'A', 'F'])
+    >>> np.all(out.index == ['B', 'C', 'A', 'D', 'F'])
     True
     >>> out.sum() == 1.0
     True
