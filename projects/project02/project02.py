@@ -94,8 +94,8 @@ def basic_stats(flights):
     """
     basic_stats that takes flights and outputs a dataframe 
     that contains statistics for flights arriving/departing for SAN. 
-    That is, the output should have two columns, ARRIVING and DEPARTING, 
-    and be indexed as follows:
+    That is, the output should have have two rows, indexed by ARRIVING 
+    and DEPARTING, and have the following columns:
 
     * number of arriving/departing flights to/from SAN (count).
     * average flight (arrival) delay of arriving/departing 
